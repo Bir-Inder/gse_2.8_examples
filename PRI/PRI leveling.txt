@@ -1,0 +1,19 @@
+Sequences['LevelingPriest'] = {
+  Author="YourName",
+  SpecID=258,  -- Shadow
+  Talents = "1,2,1,1,2,2,1",  -- Update as needed
+  Help = "Leveling Shadow Priest for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance] Shadowform
+  ]],
+  '/cast Mind Blast',
+  '/castsequence reset=target Shadow Word: Pain, Vampiric Touch, Mind Flay',
+  '/cast [combat] Shadowfiend',
+  '/cast [combat] Void Eruption',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Power Word: Shield
+  ]],
+}

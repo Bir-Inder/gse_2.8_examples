@@ -1,0 +1,20 @@
+Sequences['LevelingWarrior'] = {
+  Author="YourName",
+  SpecID=72,  -- Fury
+  Talents = "1,2,2,1,1,2,1",  -- Update as needed
+  Help = "Leveling Fury Warrior for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [combat] Charge
+  ]],
+  '/cast Bloodthirst',
+  '/cast Raging Blow',
+  '/cast [combat] Whirlwind',
+  '/cast [combat] Execute',
+  '/cast [combat] Berserker Rage',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Enrage
+  ]],
+}

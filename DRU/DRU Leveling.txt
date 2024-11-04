@@ -1,0 +1,22 @@
+Sequences['LevelingDruid'] = {
+  Author="YourName",
+  SpecID=102,  -- Feral
+  Talents = "1,1,2,1,2,2,1",  -- Update as needed
+  Help = "Leveling Feral Druid for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance:1] Bear Form
+    /cast [stance:1] Cat Form
+  ]],
+  '/cast [nostance:1] Cat Form',
+  '/cast Rake',
+  '/cast Shred',
+  '/cast [combat] Rip',
+  '/cast [combat] Tiger's Fury',
+  '/cast [combat] Ferocious Bite',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Enrage
+  ]],
+}

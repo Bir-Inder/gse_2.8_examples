@@ -1,0 +1,19 @@
+Sequences['LevelingDK'] = {
+  Author="YourName",
+  SpecID=250,  -- Blood
+  Talents = "1,2,2,1,2,2,1",  -- Update as needed
+  Help = "Leveling Blood DK for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [combat] Death Grip
+  ]],
+  '/castsequence reset=target Icy Touch, Plague Strike, Heart Strike, Death Strike',
+  '/cast [combat] Death and Decay',
+  '/cast [combat] Rune Strike',
+  '/cast [combat] Empower Rune Weapon',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Blood Presence
+  ]],
+}

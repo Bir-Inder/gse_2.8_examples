@@ -1,0 +1,20 @@
+Sequences['LevelingShaman'] = {
+  Author="YourName",
+  SpecID=262,  -- Elemental
+  Talents = "1,1,1,1,2,1,1",  -- Update as needed
+  Help = "Leveling Elemental Shaman for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance] Ghost Wolf
+  ]],
+  '/cast Lightning Bolt',
+  '/cast Lava Burst',
+  '/cast [combat] Chain Lightning',
+  '/cast [combat] Earth Shock',
+  '/cast [combat] Flame Shock',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Ascendance
+  ]],
+}

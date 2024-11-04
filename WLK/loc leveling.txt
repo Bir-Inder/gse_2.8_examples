@@ -1,0 +1,19 @@
+Sequences['LevelingWarlock'] = {
+  Author="YourName",
+  SpecID=265,  -- Affliction
+  Talents = "1,1,2,1,1,2,1",  -- Update as needed
+  Help = "Leveling Affliction Warlock for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance] Summon Voidwalker
+  ]],
+  '/castsequence reset=target Corruption, Unstable Affliction, Haunt',
+  '/cast [combat] Shadow Bolt',
+  '/cast [combat] Drain Life',
+  '/cast [combat] Seed of Corruption',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Life Tap
+  ]],
+}

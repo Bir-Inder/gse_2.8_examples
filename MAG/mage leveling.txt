@@ -1,0 +1,20 @@
+Sequences['LevelingMage'] = {
+  Author="YourName",
+  SpecID=64,  -- Frost
+  Talents = "1,1,1,1,1,2,1",  -- Update as needed
+  Help = "Leveling Frost Mage for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance] Frostbolt
+  ]],
+  '/cast Frostbolt',
+  '/cast Ice Lance',
+  '/castsequence reset=target Cone of Cold, Blizzard',
+  '/cast [combat] Frozen Orb',
+  '/cast [combat] Ice Barrier',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Icy Veins
+  ]],
+}

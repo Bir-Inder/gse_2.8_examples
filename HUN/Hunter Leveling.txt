@@ -1,0 +1,19 @@
+Sequences['LevelingHunter'] = {
+  Author="YourName",
+  SpecID=253,  -- Beast Mastery
+  Talents = "1,1,2,1,2,2,1",  -- Update as needed
+  Help = "Leveling Beast Mastery Hunter for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostance] Aspect of the Hawk
+  ]],
+  '/cast [combat] Bestial Wrath',
+  '/castsequence reset=target Serpent Sting, Arcane Shot, Steady Shot',
+  '/cast [combat] Kill Command',
+  '/cast [combat] Cobra Shot',
+  PostMacro = [[
+    /startattack
+    /petattack
+  ]],
+}

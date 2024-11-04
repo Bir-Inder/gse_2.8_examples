@@ -1,0 +1,20 @@
+Sequences['LevelingPaladin'] = {
+  Author="YourName",
+  SpecID=70,  -- Retribution
+  Talents = "1,2,2,1,1,2,1",  -- Update as needed
+  Help = "Leveling Retribution Paladin for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [combat] Judgment
+  ]],
+  '/cast Crusader Strike',
+  '/cast [combat] Blade of Justice',
+  '/cast [combat] Templar's Verdict',
+  '/cast [combat] Divine Storm',
+  '/cast [combat] Ashbringer's Fury',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Seal of Truth
+  ]],
+}

@@ -1,0 +1,20 @@
+Sequences['LevelingRogue'] = {
+  Author="YourName",
+  SpecID=259,  -- Assassination
+  Talents = "1,2,1,2,1,1,1",  -- Update as needed
+  Help = "Leveling Assassination Rogue for Wrath Classic",
+  StepFunction = "Sequential",
+  PreMacro = [[
+    /targetenemy [noharm][dead]
+    /cast [nostealth] Stealth
+  ]],
+  '/cast Garrote',
+  '/cast [combat] Mutilate',
+  '/cast [combat] Envenom',
+  '/cast [combat] Poisoned Knife',
+  '/cast [combat] Vendetta',
+  PostMacro = [[
+    /startattack
+    /cast [combat] Rupture
+  ]],
+}
